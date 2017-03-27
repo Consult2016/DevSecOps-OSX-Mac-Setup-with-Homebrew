@@ -35,6 +35,7 @@ brew install wget
 brew install Caskroom/versions/iterm2-beta
 brew install awscli
 brew install docker
+brew install Caskroom/cask/docker-toolbox
 brew install Caskroom/cask/cyberduck
 brew install htop
 brew install visual-studio-code
@@ -48,8 +49,6 @@ brew install Caskroom/cask/1password
 brew install ansible
 brew cask install daisydisk
 brew install terraform-provisioner-ansible
-brew cask install parallels-desktop
-brew cask install virtualbox
 brew cask install virtualbox-extension-pack
 brew cask install adobe-reader
 brew cask install osxfuse
@@ -58,9 +57,6 @@ brew cask install flash-player
 brew cask install radio-silence
 brew cask install istat-menus
 brew cask install caffieine
-#
-# Network security and cracking tools.
-#
 brew cask install avg-antivirus
 brew install aircrack-ng
 brew install afl-fuzz
@@ -75,7 +71,6 @@ brew install bro
 brew install capstone
 brew install crunch
 brew install ettercap
-brew install hachoir
 brew install hping
 brew install ideviceinstaller 
 brew install ike-scan
@@ -86,13 +81,11 @@ brew install lft
 brew install libdnet
 brew install libimobiledevice
 brew install libnet 
-brew install littlesnitch
 brew install masscan 
 brew install net-snmp 
 brew install netcat 
 brew install nikto 
 brew install nmap 
-brew install netspot
 brew install openssl 
 brew install ophcrack 
 brew install p0f 
@@ -112,8 +105,10 @@ brew install ssdeep
 brew install ssldump 
 brew install stunnel 
 brew install theharvester 
+brew install zmap
 brew install usbmuxd 
 brew install volatility
-brew cask install xquartz 
-brew install wireshark 
-brew install zmap
+brew cask install xquartz #requires password
+brew install wireshark #requires password
+brew cask install parallels-desktop #requires password
+brew cask install virtualbox #requires password
