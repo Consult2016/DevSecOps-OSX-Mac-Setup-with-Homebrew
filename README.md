@@ -5,13 +5,25 @@
 Why spend time downloading pesky installers form the web,
 Just run this guy, grab a coffee and come back to a fully setup Mac for development and Security testing 
 
+Approximate setup time is roughly 1-lhour 
+
+NOTE there are four applications that require authentication (left to the end)
+
+```
+xquartz
+wireshark
+parallels-desktop
+virtualbox
+```
+
 ### Prerequisites
 
 You need the following
 
+```
 Xcode 
 HomeBrew
-Authorisation from GitHub via token to prevent timeout
+```
 
 ### Installing
 
