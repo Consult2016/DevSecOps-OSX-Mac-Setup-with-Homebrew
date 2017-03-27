@@ -71,6 +71,12 @@ The script is relevant as of March 2017
 
 Any additional packages should be added under the core .sh with there category 
 
+## Further Development
+
+Integrate more security apps and function for OSX from 
+
+https://kakkulearning.wordpress.com/2014/05/22/use-mac-os-x-hackers-toolbox/
+
 ## Authors
 
 * **T0mmyKn1fe** - [T0mmyKn1fe](https://github.com/t0mmykn1fe)
