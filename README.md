@@ -22,13 +22,23 @@ $ xcode-select --install
 Install HomeBrew
 
 ```
-$ ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 Running through the homebrew setup steps
 
+Check brew works
+
 ```
 $ brew doctor
+```
+Update brew
+
+```
 $ brew update
+```
+Upgrade brew
+
+```
 $ brew upgrade
 ```
 
