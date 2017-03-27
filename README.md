@@ -34,6 +34,17 @@ $ brew upgrade
 
 ## Deployment
 
+```
+$ chmod a+x /path to file/brewsetupformac.sh
+```
+
+Run with
+
+```
+$ ./brewsetupformac.sh
+```
+
+
 The script is relevant as of March 2017
 
 Any additional packages should be added under the core .sh with there category 
