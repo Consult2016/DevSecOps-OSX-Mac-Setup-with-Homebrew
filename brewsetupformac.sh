@@ -4,6 +4,7 @@
 # 
 # Standard brew packages that I use alot.
 #
+brew install zsh zsh-completions
 brew cask install skype 
 brew cask install handbrake
 brew cask install plex-media-server 
@@ -18,7 +19,6 @@ brew install Caskroom/cask/spectacle
 brew install evernote
 brew install Caskroom/cask/google-drive
 brew install Caskroom/cask/google-chrome
-brew install Caskroom/cask/google-earth
 brew install firefox
 brew install flux-beta
 brew install node
@@ -102,13 +102,17 @@ brew install snort
 brew install socat 
 brew install sqlmap
 brew install ssdeep 
-brew install ssldump 
+brew install ssldump
+brew install Caskroom/cask/torbrowser
 brew install stunnel 
 brew install theharvester 
 brew install zmap
 brew install usbmuxd 
 brew install volatility
-brew cask install xquartz #requires password
-brew install wireshark #requires password
-brew cask install parallels-desktop #requires password
-brew cask install virtualbox #requires password
+brew install Caskroom/cask/kodi
+#the below installs require your system password
+brew cask install xquartz 
+brew install wireshark 
+brew cask install parallels-desktop 
+brew cask install virtualbox
+brew install Caskroom/cask/google-earth 
