@@ -88,14 +88,17 @@ brew install nikto
 brew install nmap 
 brew install openssl 
 brew install ophcrack 
-brew install p0f 
+brew install p0f
+brew install Caskroom/versions/slack-beta
+brew cask install transmission
 brew install postgresql 
 brew install pwnat 
 brew install pwntools 
 brew install radare2 
 brew install reaver 
 brew install ruby 
-brew install sipsak 
+brew install sipsak
+brew install testdisk 
 brew install skipfish 
 brew install sleuthkit 
 brew install snort 
@@ -108,6 +111,7 @@ brew install stunnel
 brew install theharvester 
 brew install zmap
 brew install usbmuxd 
+brew install Caskroom/cask/hipchat
 brew install volatility
 brew install Caskroom/cask/kodi
 #the below installs require your system password
