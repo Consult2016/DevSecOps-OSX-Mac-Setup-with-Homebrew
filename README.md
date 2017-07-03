@@ -31,6 +31,10 @@ Installing xCode
 ```
 $ xcode-select --install
 ```
+Accepting the X-code licence
+
+$ sudo xcodebuild -license accept
+```
 Install HomeBrew
 
 ```

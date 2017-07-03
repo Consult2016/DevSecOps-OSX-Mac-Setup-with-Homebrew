@@ -4,33 +4,28 @@
 # 
 # Standard brew packages that I use alot.
 #
-brew install zsh zsh-completions
+brew install cask
+brew install tree
 brew cask install skype 
-brew cask install handbrake
-brew cask install plex-media-server 
+brew cask install handbrake 
 brew cask install picasa 
 brew cask install spotify 
 brew cask install utorrent 
-brew cask install the-unarchiver
 brew cask install virtualbox
 brew install git
-brew install Caskroom/versions/flux-beta
 brew install Caskroom/cask/spectacle
-brew install evernote
 brew install Caskroom/cask/google-drive
 brew install Caskroom/cask/google-chrome
-brew install firefox
+brew cask install firefox
 brew install flux-beta
 brew install node
 brew install java
 brew install Caskroom/versions/java7
 brew install Caskroom/cask/vagrant
 brew install Caskroom/cask/vagrant-manager
-brew install virtualboxbrew upd
 brew install ruby
 brew cask install vlc
 brew cask install gimp
-brew cask install Alfred
 brew install wget
 brew install Caskroom/versions/iterm2-beta
 brew install awscli
@@ -38,16 +33,10 @@ brew install docker
 brew install Caskroom/cask/docker-toolbox
 brew install Caskroom/cask/cyberduck
 brew install htop
-brew install visual-studio-code
-brew install zsh
-brew cask install wireshark
-brew cask install bartender
 brew cask install hyperdock
 brew cask install xtrafinder
-brew cask install cleanmymac
 brew install Caskroom/cask/1password
 brew install ansible
-brew cask install daisydisk
 brew install terraform-provisioner-ansible
 brew cask install virtualbox-extension-pack
 brew cask install adobe-reader
@@ -55,9 +44,7 @@ brew cask install osxfuse
 brew cask install paragon-ntfs
 brew cask install flash-player
 brew cask install radio-silence
-brew cask install istat-menus
 brew cask install caffieine
-brew cask install avg-antivirus
 brew install aircrack-ng
 brew install afl-fuzz
 brew install aircrack-ng
@@ -89,7 +76,6 @@ brew install nmap
 brew install openssl 
 brew install ophcrack 
 brew install p0f
-brew install Caskroom/versions/slack-beta
 brew cask install transmission
 brew install postgresql 
 brew install pwnat 
@@ -114,9 +100,7 @@ brew install usbmuxd
 brew install Caskroom/cask/hipchat
 brew install volatility
 brew install Caskroom/cask/kodi
-#the below installs require your system password
 brew cask install xquartz 
-brew install wireshark 
-brew cask install parallels-desktop 
+brew install wireshark  
 brew cask install virtualbox
-brew install Caskroom/cask/google-earth 
+echo "all done!"
