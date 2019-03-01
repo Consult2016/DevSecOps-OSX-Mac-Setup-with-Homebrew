@@ -88,10 +88,10 @@ mas signin email@email.com
 ```shell
 brew bundle #In the same dirctory you downloaded the source code into
 ```
-##Enjoy!
+## Enjoy!
 
 #### FIXS ISSUES 
 
 ##### Brew Cheatsheet
 
-![alt tag](https://github.com/T0mmykn1fe/homebrew_mac_fresh-install//blob/master/cheatsheet.png)
+![alt tag](https://res.cloudinary.com/practicaldev/image/fetch/s--s5G3V2SE--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.code2bits.com/wp-content/uploads/cheatsheet-image/cheatsheet-homebrew.png)
