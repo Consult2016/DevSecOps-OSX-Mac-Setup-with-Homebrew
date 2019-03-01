@@ -1,86 +1,97 @@
 ![alt tag](https://coolestguidesontheplanet.com/wp-content/uploads/2013/12/home-brew-osx-lion-package-manager.png)
 
-# BrewSetup for your MAC OSX system
+# BrewSetup for your DevOps and Security testing MAC
 
 Why spend time downloading pesky installers form the web,
-Just run this guy, grab a coffee and come back to a fully setup Mac for development and Security testing 
+Just run this guy, grab a coffee and come back to a fully setup Mac for DevOps and Security testing 
 
-Approximate setup time is roughly 1-lhour 
+Approximate setup time is roughly 1-hour 
 
-NOTE there are four applications that require authentication (left to the end)
+### Preferences
 
-```
-xquartz
-wireshark
-parallels-desktop
-virtualbox
-```
 
-### Prerequisites
+#### Show Library folder
 
-You need the following
-
-```
-Xcode 
-HomeBrew
+```shell
+chflags nohidden ~/Library
 ```
 
-### Installing
+###3 Show hidden files
 
-Installing xCode
-```
-$ xcode-select --install
-```
-Accepting the X-code licence
+This can also be done by pressing `command` + `shift` + `.`.
 
-$ sudo xcodebuild -license accept
-```
-Install HomeBrew
-
-```
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-Running through the homebrew setup steps
-
-Check brew works
-
-```
-$ brew doctor
-```
-Update brew
-
-```
-$ brew update
-```
-Upgrade brew
-
-```
-$ brew upgrade
+```shell
+defaults write com.apple.finder AppleShowAllFiles YES
 ```
 
-## Deployment
+#### Show path bar
 
-```
-$ chmod a+x /path to file/brewsetupformac.sh
-```
-
-Run with
-
-```
-$ ./brewsetupformac.sh
+```shell
+defaults write com.apple.finder ShowPathbar -bool true
 ```
 
+#### Show status bar
 
-The script is relevant as of March 2017
+```shell
+defaults write com.apple.finder ShowStatusBar -bool true
+```
 
-Any additional packages should be added under the core .sh with there category 
+#### Disable unidentified developer warnings
 
-## Further Development
+```shell
+sudo spctl --master-disable
+```
 
-Integrate more security apps and function for OSX from 
+#### Reset Icons in Launchpad
 
-https://kakkulearning.wordpress.com/2014/05/22/use-mac-os-x-hackers-toolbox/
+I usually use this command after installing every application that I need - it keeps Apple applications on the first page and moves the rest to the next pages.
 
-## Authors
+```shell
+$ defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
+```
 
-* **T0mmyKn1fe** - [T0mmyKn1fe](https://github.com/t0mmykn1fe)
+#### Set Firmware Password
+
+Setting a firmware password prevents your Mac from starting up from any device other than your startup disk. It may also be set to be required on each boot.
+
+```shell
+$ firmwarepasswd -setpasswd -setmode command
+```
+
+### Homebrew
+
+```shell
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+### Turn Homebrew Analytics off
+
+Homebrew now defaults to retrieving behavioral analytics tracking. Although anonymized, you may not want to participate in that. To disable the extra network traffic:
+
+```shell
+brew analytics off
+```
+
+### Mac App Store MAS tool
+
+```shell
+brew install mas
+```
+
+#### MAS Sign in
+
+```shell
+mas signin email@email.com
+```
+
+### Run the Brewfile
+
+```shell
+brew bundle #In the same dirctory you downloaded the source code into
+```
+##Enjoy!
+
+#### FIXS ISSUES 
+
+##### Brew Cheatsheet
+
+![alt tag](https://github.com/T0mmykn1fe/homebrew_mac_fresh-install//blob/master/cheatsheet.png)
