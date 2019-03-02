@@ -7,6 +7,8 @@ Just run this guy, grab a coffee and come back to a fully setup Mac for DevOps a
 
 Approximate setup time is roughly 1-hour 
 
+The best bit about this, its idempotent so run it as many times as you like, it will know whats already installed and not install apps twice.
+
 ### Preferences
 
 
@@ -143,6 +145,139 @@ Append the source of our custom configuration file into the main Z Shell configu
 ```shell
 echo ". ~/.my-zshrc" >> "$HOME/.zshrc"
 ```
+#### Really JAZZ up your ZSH Terminal 
+
+##### Install Powerline fonts
+```shell
+$ git clone https://github.com/powerline/fonts.git
+$ cd fonts
+$ ./install.sh
+```
+change theme to 'agnoster'
+```shell
+$ open ~/.zshrc
+Set ZSH_THEME="agnoster" and save the file
+```
+##### Set Powerline font
+You can set any Powerline patched font you like. All the fonts end with “for Powerline”.
+```shell
+Open ITerm2 > Preferences > Profiles > Text > Change Font and set it to “Meslo LG DZ for Powerline” font.
+```
+
+##### Install iTerm2 “color schemes” (
+
+Download the iTerm2-color-schemes as a zip file and extract it
+
+```shell
+git clone https://github.com/mbadolato/iTerm2-Color-Schemes
+```
+
+The “Schemes” folder contains all the color scheme files — they end with .itermcolors
+```shell
+Open iTerm2 > Preferences > Profile > Colors > Color Presets > Import
+```
+In the import window, navigate to the “Schemes” folder
+
+Select all the files so you can import all the color schemes at once
+Simply select whichever color scheme you like.
+
+Select theme "Argonaut"
+
+You should have a terminal that looks like this:
+![alt tag](https://cdn-images-1.medium.com/max/2000/1*yFbKJQbBwNRbtU4dFM2UVA.png)
+
+##### Add Syntax Highlighting
+
+Clone the zsh-syntax-highlighting plugin’s repo and copy it to the “Oh My ZSH” plugins directory.
+```shell
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+Activate the plugin in ~/.zshrc by adding `zsh-syntax-highlighting to the Plugins section as shown below.
+![alt tag](https://cdn-images-1.medium.com/max/1600/1*1sGebsi0qMQMAvPLo64ARQ.png)
+
+##### Add ZSH-AutoSuggestion Plugin
+
+This plugin auto suggests any of the previous commands. Pretty handy! To select the completion, simply press → key.
+![alt tag](https://cdn-images-1.medium.com/max/2000/1*ZiTrbBVUGLWe4OwRL1Ytrg.gif)
+
+Install the plugin
+```shell
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+Open ~/.zshrc and add zsh-autosuggestions
+![alt tag](https://cdn-images-1.medium.com/max/1600/1*pshPBacVfZgHaKdlG1cajg.png)
+
+##### Add Cowsay, Fortune and Lolcat
+
+Cowsay and Fortune will be installed with the Brewfile. if your running throught this prior to running the Brewfile go ahead and hit the following
+
+```shell
+$ brew install cowsay
+$ brew install fortune
+$ sudo gem install lolcat
+```
+Then head into your .zshrc file and add the config to the bottom of the file
+```shell
+Fortune | cowsay -f vader | lolcat
+```
+At the end your editor should look a little like this....
+![alt tag](https://cdn-images-1.medium.com/max/800/0*7aEb1uNUHNOqBQx9.png)
+
+#### Install official KALI linux Vagrant
+https://www.kali.org/news/announcing-kali-for-vagrant/
+
+```shell
+$ cd ~/Downloads
+$ vagrant init offensive-security/kali-linux
+$ vagrant up
+$ vagrant ssh
+```
+
+#### NANO config (the best editor ever)
+```shell
+nano ~/.nanorc
+```
+add all the below to the file
+```shell
+include /usr/local/share/nano/asm.nanorc
+include /usr/local/share/nano/awk.nanorc
+include /usr/local/share/nano/c.nanorc
+include /usr/local/share/nano/cmake.nanorc
+include /usr/local/share/nano/css.nanorc
+include /usr/local/share/nano/debian.nanorc
+include /usr/local/share/nano/fortran.nanorc
+include /usr/local/share/nano/gentoo.nanorc
+include /usr/local/share/nano/groff.nanorc
+include /usr/local/share/nano/html.nanorc
+include /usr/local/share/nano/java.nanorc
+include /usr/local/share/nano/makefile.nanorc
+include /usr/local/share/nano/man.nanorc
+include /usr/local/share/nano/mgp.nanorc
+include /usr/local/share/nano/mutt.nanorc
+include /usr/local/share/nano/nanorc.nanorc
+include /usr/local/share/nano/objc.nanorc
+include /usr/local/share/nano/ocaml.nanorc
+include /usr/local/share/nano/patch.nanorc
+include /usr/local/share/nano/perl.nanorc
+include /usr/local/share/nano/php.nanorc
+include /usr/local/share/nano/pov.nanorc
+include /usr/local/share/nano/python.nanorc
+include /usr/local/share/nano/ruby.nanorc
+include /usr/local/share/nano/sh.nanorc
+include /usr/local/share/nano/tcl.nanorc
+include /usr/local/share/nano/tex.nanorc
+include /usr/local/share/nano/yaml.nanorc
+include /usr/local/share/nano/go.nanorc
+include /usr/local/share/nano/terraform.nanorc
+include /usr/local/share/nano/cloudformation.nanorc
+include /usr/local/share/nano/xml.nanor
+```
+Save, exit and then run 
+```shell
+source ~/.nanorc
+```
+Done, you now have Syntax highlighting in the best editor for the most common code types.
+
 #### Git config
 
 Make sure to replace name and email with your personal details.
