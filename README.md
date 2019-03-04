@@ -234,47 +234,12 @@ $ vagrant ssh
 ```
 
 #### NANO config (the best editor ever)
+
+![alt tag](https://thecustomizewindows.com/wp-content/uploads/2015/01/Nano-Syntax-Highlighting-nanorc.png)
+
+Scopatz has an AWESOME guide to Pimping your NANO out
 ```shell
-nano ~/.nanorc
-```
-add all the below to the file
-```shell
-include /usr/local/share/nano/asm.nanorc
-include /usr/local/share/nano/awk.nanorc
-include /usr/local/share/nano/c.nanorc
-include /usr/local/share/nano/cmake.nanorc
-include /usr/local/share/nano/css.nanorc
-include /usr/local/share/nano/debian.nanorc
-include /usr/local/share/nano/fortran.nanorc
-include /usr/local/share/nano/gentoo.nanorc
-include /usr/local/share/nano/groff.nanorc
-include /usr/local/share/nano/html.nanorc
-include /usr/local/share/nano/java.nanorc
-include /usr/local/share/nano/makefile.nanorc
-include /usr/local/share/nano/man.nanorc
-include /usr/local/share/nano/mgp.nanorc
-include /usr/local/share/nano/mutt.nanorc
-include /usr/local/share/nano/nanorc.nanorc
-include /usr/local/share/nano/objc.nanorc
-include /usr/local/share/nano/ocaml.nanorc
-include /usr/local/share/nano/patch.nanorc
-include /usr/local/share/nano/perl.nanorc
-include /usr/local/share/nano/php.nanorc
-include /usr/local/share/nano/pov.nanorc
-include /usr/local/share/nano/python.nanorc
-include /usr/local/share/nano/ruby.nanorc
-include /usr/local/share/nano/sh.nanorc
-include /usr/local/share/nano/tcl.nanorc
-include /usr/local/share/nano/tex.nanorc
-include /usr/local/share/nano/yaml.nanorc
-include /usr/local/share/nano/go.nanorc
-include /usr/local/share/nano/terraform.nanorc
-include /usr/local/share/nano/cloudformation.nanorc
-include /usr/local/share/nano/xml.nanor
-```
-Save, exit and then run 
-```shell
-source ~/.nanorc
+https://github.com/scopatz/nanorc
 ```
 Done, you now have Syntax highlighting in the best editor for the most common code types.
 
