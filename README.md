@@ -18,7 +18,7 @@ The best bit about this, its idempotent so run it as many times as you like, it 
 chflags nohidden ~/Library
 ```
 
-###3 Show hidden files
+### Show hidden files
 
 This can also be done by pressing `command` + `shift` + `.`.
 
@@ -44,12 +44,13 @@ defaults write com.apple.finder ShowStatusBar -bool true
 sudo spctl --master-disable
 ```
 
-#### Reset Icons in Launchpad
+#### Save Screenshots to alternative folder
 
 I usually use this command after installing every application that I need - it keeps Apple applications on the first page and moves the rest to the next pages.
 
 ```shell
-$ defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
+$ defaults write com.apple.screencapture location ~/Pictures/screenshots
+$ killall SystemUIServer
 ```
 
 #### Set Firmware Password
