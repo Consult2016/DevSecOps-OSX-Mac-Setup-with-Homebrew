@@ -100,59 +100,437 @@ brew bundle #In the same dirctory you downloaded the source code into
 
 ## After config
 
+#### VS Code settings.json
+
+```shell
+{
+
+
+
+    "workbench.colorTheme": "One Monokai",
+    "workbench.iconTheme": "material-icon-theme",
+    "window.zoomLevel": -1,
+    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    "cSpell.userWords": [
+        "ASLAN"
+    ],
+    "sync.gist": "ebe2a177355d820e0cfc7faa62a26b23",
+    "python.pythonPath": "/usr/local/bin/python3",
+    "python.jediEnabled": false,
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "python"
+    ],
+    "git-autoconfig.configList": [
+        {},
+        {
+            "user.email": "foo@foo.com",
+            "user.name": "foo"
+        }
+    ],
+    "vs-kubernetes": {
+        "vs-kubernetes.draft-path": "/Users/foo/.vs-kubernetes/tools/draft/darwin-amd64/draft",
+        "vs-kubernetes.helm-path": "/Users/foo/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+        "vs-kubernetes.minikube-path": "/Users/foo/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+        "vs-kubernetes.kubectl-path": "/Users/foo/.vs-kubernetes/tools/kubectl/kubectl"
+    }
+}
+```
+
 #### ZSH config 
 oh my ZSH
 
 ```shell
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
+Lets change the theme now
+You can browse all the “Oh My ZSH” Themes here. To change the Theme, simply change the ZSH_THEME value in ~/.zshrc file from robbyrussell to Avit.
+Run the following command to update the config.
+```shell
+$ source ~/.zhrc
+```
+Lets add some backround config with Iterm
+```shell
+Open ITerm2 > Preferences > Profiles > Colors and change the background black color to use 20% gray
+```
 
-Instead of editing the .zshrc file, we will make our own and then point it as a source to the main configuration file.
-Create a file and open it in the Editor:
-
-```shell
-touch ~/.my-zshrc && bash -c 'exec env ${EDITOR:=nano} ~/.my-zshrc'
-```
-Copy/Paste the following content:
-```shell
-# Load extensions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# Activate plugins
-plugins=(git zsh-completions)
-# Custom vars
-SPARK=$HOME/.spark-installer
-COMPOSER=$HOME/.composer/vendor/bin
-LOCAL_NODE_BIN=node_modules/.bin
-# Custom paths
-PATH=/usr/local/sbin:$PATH
-PATH=$SPARK:$PATH
-PATH=$COMPOSER:$PATH
-PATH=$LOCAL_NODE_BIN:$PATH
-# Set default editor
-export EDITOR='subl -w'
-# Load my aliases
-if [ -f ~/.aliases ]; then
-  . ~/.aliases
-fi
-# Load my functions
-if [ -f ~/.functions ]; then
-  . ~/.functions
-fi
-local ret_status="%(?:%{$fg_bold[green]%}△ :%{$fg_bold[red]%}▽ )"
-PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
-```
-Append the source of our custom configuration file into the main Z Shell configuration file:
-```shell
-echo ". ~/.my-zshrc" >> "$HOME/.zshrc"
-```
 #### Really JAZZ up your ZSH Terminal 
+
+Settings for ITerm JSON here
+```JSON
+{
+  "Ansi 3 Color" : {
+    "Green Component" : 0.72656995058059692,
+    "Red Component" : 1,
+    "Blue Component" : 0
+  },
+  "Tags" : [
+
+  ],
+  "Ansi 12 Color" : {
+    "Green Component" : 0.5733030673510271,
+    "Red Component" : 0.00053359762918048226,
+    "Blue Component" : 1
+  },
+  "Ansi 7 Color" : {
+    "Green Component" : 1,
+    "Red Component" : 1,
+    "Blue Component" : 1
+  },
+  "Ansi 8 Color" : {
+    "Green Component" : 0.26696832579185525,
+    "Red Component" : 0.26696832579185525,
+    "Blue Component" : 0.26696832579185525
+  },
+  "Bold Color" : {
+    "Green Component" : 0.6100342869758606,
+    "Red Component" : 0.61956524848937988,
+    "Blue Component" : 0.60246169567108154
+  },
+  "Ansi 9 Color" : {
+    "Green Component" : 0.15470406080870669,
+    "Red Component" : 1,
+    "Blue Component" : 0.24923402424592656
+  },
+  "Horizontal Spacing" : 1,
+  "Right Option Key Sends" : 0,
+  "Rows" : 25,
+  "Default Bookmark" : "No",
+  "Cursor Guide Color" : {
+    "Red Component" : 0.70213186740875244,
+    "Color Space" : "sRGB",
+    "Blue Component" : 1,
+    "Alpha Component" : 0.25,
+    "Green Component" : 0.9268307089805603
+  },
+  "Non-ASCII Anti Aliased" : true,
+  "Use Bright Bold" : true,
+  "Ansi 10 Color" : {
+    "Green Component" : 0.88189995290000001,
+    "Red Component" : 0.67126059688058637,
+    "Blue Component" : 0.35646489677720017
+  },
+  "Ambiguous Double Width" : false,
+  "Jobs to Ignore" : [
+    "rlogin",
+    "ssh",
+    "slogin",
+    "telnet"
+  ],
+  "Ansi 15 Color" : {
+    "Green Component" : 1,
+    "Red Component" : 1,
+    "Blue Component" : 1
+  },
+  "Foreground Color" : {
+    "Green Component" : 0.98048108816146851,
+    "Red Component" : 1,
+    "Blue Component" : 0.95548701286315918
+  },
+  "Working Directory" : "\/Users\/tcockin",
+  "Blinking Cursor" : true,
+  "Disable Window Resizing" : true,
+  "Sync Title" : false,
+  "Prompt Before Closing 2" : false,
+  "BM Growl" : true,
+  "Command" : "\/bin\/zsh",
+  "Description" : "Default",
+  "Mouse Reporting" : true,
+  "Screen" : -1,
+  "Selection Color" : {
+    "Green Component" : 0.16498950123786926,
+    "Red Component" : 0,
+    "Blue Component" : 0.23076923191547394
+  },
+  "Columns" : 80,
+  "Idle Code" : 0,
+  "Ansi 13 Color" : {
+    "Green Component" : 0.37417232689266022,
+    "Red Component" : 0.60504487800788187,
+    "Blue Component" : 0.92307692307692313
+  },
+  "Custom Command" : "Yes",
+  "ASCII Anti Aliased" : true,
+  "Non Ascii Font" : "Monaco 12",
+  "Vertical Spacing" : 1,
+  "Use Bold Font" : true,
+  "Option Key Sends" : 0,
+  "Selected Text Color" : {
+    "Green Component" : 1,
+    "Red Component" : 1,
+    "Blue Component" : 1
+  },
+  "Background Color" : {
+    "Red Component" : 0.10000000000000001,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.10000000000000001,
+    "Alpha Component" : 1,
+    "Green Component" : 0.10000000000000001
+  },
+  "Character Encoding" : 4,
+  "Ansi 11 Color" : {
+    "Green Component" : 0.82281720845913986,
+    "Red Component" : 1,
+    "Blue Component" : 0.25792301594327316
+  },
+  "Use Italic Font" : true,
+  "Unlimited Scrollback" : false,
+  "Keyboard Map" : {
+    "0xf700-0x260000" : {
+      "Action" : 10,
+      "Text" : "[1;6A"
+    },
+    "0x37-0x40000" : {
+      "Action" : 11,
+      "Text" : "0x1f"
+    },
+    "0x32-0x40000" : {
+      "Action" : 11,
+      "Text" : "0x00"
+    },
+    "0xf709-0x20000" : {
+      "Action" : 10,
+      "Text" : "[17;2~"
+    },
+    "0xf70c-0x20000" : {
+      "Action" : 10,
+      "Text" : "[20;2~"
+    },
+    "0xf729-0x20000" : {
+      "Action" : 10,
+      "Text" : "[1;2H"
+    },
+    "0xf72b-0x40000" : {
+      "Action" : 10,
+      "Text" : "[1;5F"
+    },
+    "0xf705-0x20000" : {
+      "Action" : 10,
+      "Text" : "[1;2Q"
+    },
+    "0xf703-0x260000" : {
+      "Action" : 10,
+      "Text" : "[1;6C"
+    },
+    "0xf700-0x220000" : {
+      "Action" : 10,
+      "Text" : "[1;2A"
+    },
+    "0xf701-0x280000" : {
+      "Action" : 11,
+      "Text" : "0x1b 0x1b 0x5b 0x42"
+    },
+    "0x38-0x40000" : {
+      "Action" : 11,
+      "Text" : "0x7f"
+    },
+    "0x33-0x40000" : {
+      "Action" : 11,
+      "Text" : "0x1b"
+    },
+    "0xf703-0x220000" : {
+      "Action" : 10,
+      "Text" : "[1;2C"
+    },
+    "0xf701-0x240000" : {
+      "Action" : 10,
+      "Text" : "[1;5B"
+    },
+    "0xf70d-0x20000" : {
+      "Action" : 10,
+      "Text" : "[21;2~"
+    },
+    "0xf702-0x260000" : {
+      "Action" : 10,
+      "Text" : "[1;6D"
+    },
+    "0xf729-0x40000" : {
+      "Action" : 10,
+      "Text" : "[1;5H"
+    },
+    "0xf706-0x20000" : {
+      "Action" : 10,
+      "Text" : "[1;2R"
+    },
+    "0x34-0x40000" : {
+      "Action" : 11,
+      "Text" : "0x1c"
+    },
+    "0xf700-0x280000" : {
+      "Action" : 11,
+      "Text" : "0x1b 0x1b 0x5b 0x41"
+    },
+    "0x2d-0x40000" : {
+      "Action" : 11,
+      "Text" : "0x1f"
+    },
+    "0xf70e-0x20000" : {
+      "Action" : 10,
+      "Text" : "[23;2~"
+    },
+    "0xf702-0x220000" : {
+      "Action" : 10,
+      "Text" : "[1;2D"
+    },
+    "0xf703-0x280000" : {
+      "Action" : 11,
+      "Text" : "0x1b 0x1b 0x5b 0x43"
+    },
+    "0xf700-0x240000" : {
+      "Action" : 10,
+      "Text" : "[1;5A"
+    },
+    "0xf707-0x20000" : {
+      "Action" : 10,
+      "Text" : "[1;2S"
+    },
+    "0xf70a-0x20000" : {
+      "Action" : 10,
+      "Text" : "[18;2~"
+    },
+    "0x35-0x40000" : {
+      "Action" : 11,
+      "Text" : "0x1d"
+    },
+    "0xf70f-0x20000" : {
+      "Action" : 10,
+      "Text" : "[24;2~"
+    },
+    "0xf703-0x240000" : {
+      "Action" : 10,
+      "Text" : "[1;5C"
+    },
+    "0xf701-0x260000" : {
+      "Action" : 10,
+      "Text" : "[1;6B"
+    },
+    "0xf702-0x280000" : {
+      "Action" : 11,
+      "Text" : "0x1b 0x1b 0x5b 0x44"
+    },
+    "0xf72b-0x20000" : {
+      "Action" : 10,
+      "Text" : "[1;2F"
+    },
+    "0x36-0x40000" : {
+      "Action" : 11,
+      "Text" : "0x1e"
+    },
+    "0xf708-0x20000" : {
+      "Action" : 10,
+      "Text" : "[15;2~"
+    },
+    "0xf701-0x220000" : {
+      "Action" : 10,
+      "Text" : "[1;2B"
+    },
+    "0xf70b-0x20000" : {
+      "Action" : 10,
+      "Text" : "[19;2~"
+    },
+    "0xf702-0x240000" : {
+      "Action" : 10,
+      "Text" : "[1;5D"
+    },
+    "0xf704-0x20000" : {
+      "Action" : 10,
+      "Text" : "[1;2P"
+    }
+  },
+  "Window Type" : 0,
+  "Cursor Boost" : 0,
+  "Cursor Type" : 0,
+  "Background Image Location" : "",
+  "Blur" : false,
+  "Badge Color" : {
+    "Red Component" : 1,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0,
+    "Alpha Component" : 0.5,
+    "Green Component" : 0.1491314172744751
+  },
+  "Scrollback Lines" : 1000,
+  "Send Code When Idle" : false,
+  "Close Sessions On End" : true,
+  "Terminal Type" : "xterm-256color",
+  "Visual Bell" : true,
+  "Flashing Bell" : false,
+  "Silence Bell" : false,
+  "Ansi 14 Color" : {
+    "Green Component" : 1,
+    "Red Component" : 0.4042010611351281,
+    "Blue Component" : 0.94094775504779782
+  },
+  "Name" : "Default",
+  "Cursor Text Color" : {
+    "Green Component" : 0,
+    "Red Component" : 1,
+    "Blue Component" : 0.0940093994140625
+  },
+  "Minimum Contrast" : 0.42453835227272729,
+  "Shortcut" : "",
+  "Cursor Color" : {
+    "Green Component" : 0,
+    "Red Component" : 1,
+    "Blue Component" : 0.0940093994140625
+  },
+  "Ansi 0 Color" : {
+    "Green Component" : 0.13574660633484159,
+    "Red Component" : 0.13574660633484159,
+    "Blue Component" : 0.13574660633484159
+  },
+  "Transparency" : 0,
+  "Ansi 2 Color" : {
+    "Green Component" : 0.88189995288848877,
+    "Red Component" : 0.54928803443908691,
+    "Blue Component" : 0.04123397171497345
+  },
+  "Custom Directory" : "No",
+  "Ansi 4 Color" : {
+    "Green Component" : 0.55481654405593872,
+    "Red Component" : 0,
+    "Blue Component" : 0.97294086217880249
+  },
+  "Ansi 5 Color" : {
+    "Green Component" : 0.26314744353294373,
+    "Red Component" : 0.42564234137535095,
+    "Blue Component" : 0.65052211284637451
+  },
+  "Use Non-ASCII Font" : false,
+  "Ansi 6 Color" : {
+    "Green Component" : 0.84575581550598145,
+    "Red Component" : 0,
+    "Blue Component" : 0.92260181903839111
+  },
+  "Normal Font" : "MesloLGMForPowerline-Regular 14",
+  "Link Color" : {
+    "Red Component" : 0,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.73423302173614502,
+    "Alpha Component" : 1,
+    "Green Component" : 0.35916060209274292
+  },
+  "Guid" : "457B9CFC-16FA-4238-9DA8-A922C6C0B15A",
+  "Ansi 1 Color" : {
+    "Green Component" : 0,
+    "Red Component" : 1,
+    "Blue Component" : 0.058871746063232422
+  }
+}
+```
 
 ##### Install Powerline fonts
 ```shell
+$ cd ~/.oh-my-zsh
 $ git clone https://github.com/powerline/fonts.git
 $ cd fonts
-$ ./install.sh
+./install.sh
 ```
 change theme to 'agnoster'
 ```shell
@@ -210,6 +588,7 @@ Open ~/.zshrc and add zsh-autosuggestions
 
 ##### Add Cowsay, Fortune and Lolcat
 
+Credit to Adam https://medium.com/@Jarvski/customizing-the-os-x-terminal-11fda5c3dd5c2
 Cowsay and Fortune will be installed with the Brewfile. if your running throught this prior to running the Brewfile go ahead and hit the following
 
 ```shell
@@ -242,7 +621,49 @@ Scopatz has an AWESOME guide to Pimping your NANO out
 ```shell
 https://github.com/scopatz/nanorc
 ```
-Done, you now have Syntax highlighting in the best editor for the most common code types.
+####Automatic Installers 
+Automatic installer
+Finally, you can run an automatic installer using the following code:
+```shell
+$ curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+```
+or alternatively:
+```shell
+$ wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh
+```
+
+####Manual config
+#####Copy Files
+These should be placed inside of the ~/.nano/ directory. Or for system-wide installation /usr/share/nano-syntax-highlighting/. In other words:
+```shell
+git clone git@github.com:scopatz/nanorc.git ~/.nano
+```
+Note - if you have any issues (ssh was not properly configured), alternatively use:
+```shell
+git clone https://github.com/scopatz/nanorc.git ~/.nano
+```
+System wide will look like so:
+```shell
+sudo git clone https://github.com/scopatz/nanorc.git /usr/share/nano-syntax-highlighting/
+```
+#####Configure nano
+Once there you should add the languages you want to your nano configuration file ~/.nanorc. For example:
+```shell
+## C/C++
+include "~/.nano/c.nanorc"
+```
+You can also append the contents of ~/.nano/nanorc into your ~/.nanorc to include all languages:
+```shell
+cat ~/.nano/nanorc >> ~/.nanorc
+```
+Or to be less verbose, append content of the folder in one line with wildcard:
+```shell
+## For all users
+$ echo "include $install_path/*.nanorc" >> /etc/nanorc
+## For current user
+$ echo "include $install_path/*.nanorc" >> ~/.nanorc
+```
+where $install_path is /usr/share/nano-syntax-highlighting or ~/.nano/ or ...
 
 #### Git config
 
