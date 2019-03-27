@@ -104,9 +104,6 @@ brew bundle #In the same dirctory you downloaded the source code into
 
 ```shell
 {
-
-
-
     "workbench.colorTheme": "One Monokai",
     "workbench.iconTheme": "material-icon-theme",
     "window.zoomLevel": -1,
