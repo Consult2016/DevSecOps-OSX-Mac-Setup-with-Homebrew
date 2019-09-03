@@ -100,46 +100,6 @@ brew bundle #In the same dirctory you downloaded the source code into
 
 ## After config
 
-#### VS Code settings.json
-
-```shell
-{
-    "workbench.colorTheme": "One Monokai",
-    "workbench.iconTheme": "material-icon-theme",
-    "window.zoomLevel": -1,
-    "editor.fontSize": 14,
-    "terminal.integrated.fontSize": 14,
-    "cSpell.userWords": [
-        "ASLAN"
-    ],
-    "sync.gist": "ebe2a177355d820e0cfc7faa62a26b23",
-    "python.pythonPath": "/usr/local/bin/python3",
-    "python.jediEnabled": false,
-    "spellright.language": [
-        "en"
-    ],
-    "spellright.documentTypes": [
-        "markdown",
-        "latex",
-        "plaintext",
-        "python"
-    ],
-    "git-autoconfig.configList": [
-        {},
-        {
-            "user.email": "foo@foo.com",
-            "user.name": "foo"
-        }
-    ],
-    "vs-kubernetes": {
-        "vs-kubernetes.draft-path": "/Users/foo/.vs-kubernetes/tools/draft/darwin-amd64/draft",
-        "vs-kubernetes.helm-path": "/Users/foo/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-        "vs-kubernetes.minikube-path": "/Users/foo/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-        "vs-kubernetes.kubectl-path": "/Users/foo/.vs-kubernetes/tools/kubectl/kubectl"
-    }
-}
-```
-
 #### ZSH config 
 oh my ZSH
 
@@ -239,7 +199,7 @@ At the end your editor should look a little like this....
 
 Why not use the best text editor with syntax highlighting for everything.
 
-Simply take the below scripts, "touch" it into a "nano4upgradeall.sh" and run it after a "chmod a+x"
+Simply take the below scripts, "touch" it into a "nano4upgrade.sh" and run it after a "chmod a+x"
 
 Or just run it from within this repo 
 
