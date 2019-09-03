@@ -58,7 +58,7 @@ $ killall SystemUIServer
 Setting a firmware password prevents your Mac from starting up from any device other than your startup disk. It may also be set to be required on each boot.
 
 ```shell
-$ firmwarepasswd -setpasswd -setmode command
+$ sudo firmwarepasswd -setpasswd
 ```
 
 ### Xcode
