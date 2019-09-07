@@ -11,6 +11,8 @@ tap "homebrew/services"
 tap "jenkins-x/jx"
 tap "petere/postgresql"
 tap "sidaf/pentest"
+cask "java"
+cask "adoptopenjdk8"
 brew "afl-fuzz"
 brew "amap"
 brew "ansible"
@@ -174,17 +176,12 @@ cask "aws-vault"
 cask "balenaetcher"
 cask "bartender"
 cask "bitwarden"
-cask "boxcryptor"
 cask "brave-browser"
 cask "burp-suite"
-cask "calibre"
 cask "ccleaner"
-cask "cleanmymac"
 cask "cyberduck"
 cask "daisydisk"
-cask "discord"
 cask "dotnet-sdk"
-cask "dotnet"
 cask "dropbox"
 cask "evernote"
 cask "firefox-esr"
@@ -205,13 +202,11 @@ cask "hyperdock"
 cask "istat-menus"
 cask "istumbler"
 cask "iterm2"
-cask "java"
 cask "keepingyouawake"
 cask "kitematic"
 cask "little-snitch"
 cask "lyn"
 cask "malwarebytes"
-cask "microsoft-remote-desktop-beta"
 cask "minikube"
 cask "ngrok"
 cask "nordvpn"
@@ -225,17 +220,15 @@ cask "postman"
 cask "powershell"
 cask "radio-silence"
 cask "sdformatter"
-cask "signal-beta"
+cask "signal"
 cask "signal"
 cask "silverlight"
 cask "slack"
 cask "spectacle"
 cask "spotify"
 cask "steam"
-cask "teamviewer"
 cask "the-unarchiver"
 cask "tor-browser"
-cask "torbrowser"
 cask "transmission"
 cask "turtl"
 cask "unetbootin"
@@ -256,17 +249,11 @@ mas "Hour", id: 569089415
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
-mas "LanScan Pro", id: 562184107
 mas "LanScan", id: 472226235
 mas "Memory Clean", id: 451444120
 mas "Microsoft Remote Desktop", id: 1295203466
-mas "NetSpot", id: 514951692
-mas "NordVPN IKE", id: 1116599239
 mas "Numbers", id: 409203825
-mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
 mas "Server", id: 883878097
-mas "Slack", id: 803453959
-mas "The Unarchiver", id: 425424353
 mas "Total Adjustment for Final Cut Pro", id: 482883336
 mas "Xcode", id: 497799835
